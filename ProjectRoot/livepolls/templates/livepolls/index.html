@@ -7,13 +7,13 @@
     <title>투표index</title>
 </head>
 <body>
-    <h2>라이브 투표 하기</h2>     
+    <h2>라이브 투표하기</h2>
     <!-- latest_question_list에 데이터가 있다면 갯수만큼 반복한다. -->
     {% if latest_question_list %}
         <ul>
         {% for question in latest_question_list %}
             <!-- 
-                id : 일련번호 컬럼(PK) 
+                id : 일련번호 컬럼(PK)
                 question_text : 투표의 질문 항목
             -->
             <li><a href="/livepolls/{{ question.id }}/">{{ question.question_text }}</a></li>
